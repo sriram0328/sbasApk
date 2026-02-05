@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Download SBAS</title>
+
+<style>
+:root{
+  --primary:#2563eb;
+  --primary2:#4f46e5;
+  --gray:#475569;
+}
+
+*{
+  box-sizing:border-box;
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    radial-gradient(circle at 20% 20%, #60a5fa33, transparent 40%),
+    radial-gradient(circle at 80% 70%, #818cf833, transparent 40%),
+    linear-gradient(135deg,#eef2ff,#f8fafc);
+}
+
+/* CARD */
+.container{
+  width:100%;
+  max-width:440px;
+  background:rgba(255,255,255,.9);
+  backdrop-filter:blur(14px);
+  border-radius:20px;
+  padding:26px;
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.12),
+    inset 0 1px 0 rgba(255,255,255,.6);
+  position:relative;
+  overflow:hidden;
+}
+
+.container::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:4px;
+  background:linear-gradient(90deg,var(--primary),var(--primary2));
+}
+
+/* LOGO */
+.logo{
+  text-align:center;
+  margin-bottom:6px;
+}
+
+.logo img{
+  width:64px;
+  height:64px;
+  border-radius:16px;
+  box-shadow:0 8px 16px rgba(0,0,0,.12);
+}
+
+/* TITLE BLOCK — COMPACT */
+h1{
+  text-align:center;
+  margin:8px 0 2px;
+  font-size:24px;
+}
+
+h4{
+  text-align:center;
+  margin:2px 0 4px;
+  font-size:14px;
+  font-weight:600;
+  color:#334155;
+}
+
+.subtitle{
+  text-align:center;
+  color:var(--gray);
+  font-size:13px;
+  margin:0 0 12px;
+}
+
+/* BADGES */
+.badges{
+  display:flex;
+  gap:6px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-bottom:14px;
+}
+
+.badge{
+  font-size:11px;
+  padding:5px 9px;
+  background:#eef2ff;
+  color:#3730a3;
+  border-radius:999px;
+  font-weight:600;
+}
+
+/* BUTTON */
+.download-btn{
+  display:block;
+  width:100%;
+  padding:14px;
+  border-radius:14px;
+  text-decoration:none;
+  text-align:center;
+  font-size:15px;
+  font-weight:700;
+  color:white;
+  background:linear-gradient(135deg,var(--primary),var(--primary2));
+  transition:.2s;
+  box-shadow:0 12px 24px rgba(37,99,235,.35);
+}
+
+.download-btn:hover{
+  transform:translateY(-1px);
+  box-shadow:0 16px 32px rgba(37,99,235,.45);
+}
+
+/* NOTE */
+.note{
+  margin-top:10px;
+  font-size:12px;
+  color:var(--gray);
+  text-align:center;
+}
+
+/* STEPS — visually lighter than CTA */
+.steps{
+  margin-top:18px;
+  background:#f8fafc;
+  padding:14px;
+  border-radius:12px;
+  font-size:13px;
+  border:1px solid #e2e8f0;
+}
+
+.steps h3{
+  margin:0 0 8px;
+  font-size:14px;
+}
+
+.steps ol{
+  margin:0;
+  padding-left:18px;
+}
+
+.steps li{
+  margin-bottom:4px;
+}
+
+/* TRUST ROW */
+.trust{
+  display:flex;
+  justify-content:space-between;
+  margin-top:14px;
+  font-size:11px;
+  color:#64748b;
+}
+
+/* FOOTER */
+.footer{
+  text-align:center;
+  margin-top:16px;
+  font-size:11px;
+  color:#94a3b8;
+}
+
+/* MOBILE */
+@media(max-width:480px){
+  .container{
+    margin:14px;
+    padding:22px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="logo">
+    <img src="app_icon.png" alt="SBAS Logo">
+  </div>
+
+  <h1>SBAS</h1>
+  <h4>Smart Barcode Based Attendance System</h4>
+  <p class="subtitle">Official Android App Download</p>
+
+  <div class="badges">
+    <div class="badge">Secure</div>
+    <div class="badge">Latest Version</div>
+    <div class="badge">Direct APK</div>
+  </div>
+
+  <a class="download-btn"
+     href="https://github.com/sriram0328/SBAS_unified_app/releases/download/v1.0.0/SBASrelease.apk"
+     download>
+     Download for Android
+  </a>
+
+  <p class="note">
+    Not distributed via Play Store. Android may show a security warning.
+  </p>
+
+  <div class="steps">
+    <h3>How to install</h3>
+    <ol>
+      <li>Download the APK</li>
+      <li>Open the downloaded file</li>
+      <li>Allow <b>Install unknown apps</b></li>
+      <li>Install and open</li>
+    </ol>
+  </div>
+
+  <div class="trust">
+    <span>Version 1.0.0</span>
+    <span>APK Size: 28.5 MB</span>
+  </div>
+
+  <div class="footer">
+    © 2026 SBAS App. All rights reserved.
+  </div>
+
+</div>
+
+</body>
+</html>
